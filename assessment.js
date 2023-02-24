@@ -18,16 +18,31 @@ assessmentButton.onclick = () => {
     
     // TODO 診断結果表示エリアの作成
     resultDivided.innerText = '';
-    const header = document.createElement('h3');
-    header.innerText = '診断結果';
-    resultDivided.appendChild(header);
 
+    // headerDivided の作成
+    const headerDivided = document.createElement('div');
+    headerDivided.setAttribute('class', 'card-header');
+    headerDivided.innerText = '診断結果';
+
+    // bodyDivided の作成
+    const bodyDivided = document.createElement('div');
+    bodyDivided.setAttribute('class', 'card-body');
+    
     const paragraph = document.createElement('p');
+    paragraph.setAttribute('class', 'card-text');
     const result = assessment(userName);
     paragraph.innerText = result;
-    resultDivided.appendChild(paragraph);
+    bodyDivided.appendChild(paragraph);
 
-    // TODO ツイートエリアの作成
+    // resultDivided に Bootstrap のスタイルを適用する
+    resultDivided.setAttribute('class', 'card');
+    resultDivided.setAttribute('style', 'max-width: 700px;');
+
+    // headerDivided とbodyDivided を resultDivided に差し込む
+    resultDivided.appendChild(headerDivided);
+    resultDivided.appendChild(bodyDivided);
+
+    // ツイートエリアの作成
     tweetDivided.innerText = '';
     const anchor = document.createElement('a');
     const hrefValue =
@@ -38,12 +53,12 @@ assessmentButton.onclick = () => {
     anchor.setAttribute('class', 'twitter-hashtag-button');
     anchor.setAttribute('data-text', result);
     anchor.innerText = 'Tweet #あなたのいいところ';
-    resultDivided.appendChild(anchor);
+    tweetDivided.appendChild(anchor);
 
     // widgets.js の設定
     const script = document.createElement('script');
     script.setAttribute('src', 'https://platform.twitter.com/widgets.js')
-    resultDivided.appendChild(script);
+    tweetDivided.appendChild(script);
 
 }
 
