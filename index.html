@@ -5,33 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playground</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <!-- <link rel="stylesheet" href="stylesheet.css"> -->
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
 </head>
 <body>
-    <div id="header" class="header">
-        <div class="copy-container">
-            <h2>Playground<span>.</span></h2>
-        </div>
-    </div>
-
-    <div class="main">
-        <div class="contents">
-            <h3 class="section-title">Playground</h3>
-            <div class="contents-item">
-                <div class="contents-image">
-                    <a href="assessment/assessment.html" 
-                    target="_blank" rel="noopener noreferrer">
-                        <img src="image/assessment.jpg" alt="あなたのいいところ診断">
-                    </a>
-                </div>
-                <p>
-                    <b>あなたのいいところ診断</b><br>
-                    <font size="3">N予備校で製作したやつ</font>
-                </p>
+    <header>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                <strong>Playground</strong>
+                </a>
             </div>
         </div>
-    </div>
+    </header>
+    
+    <main>
+        <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">製作物置き場</h1>
+                    <p class="lead text-muted">宴筆が勉強中にできた副産物を置きます</p>
+                    <p>
+                    <a href="#" class="btn btn-primary my-2">Follow on Twitter</a>
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <div class="footer"></div>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <img src="image/assessment.jpg" alt="あなたのいいところ診断">
+                            <div class="card-body">
+                                <h5 class="card-title">あなたのいいところ診断</h5>
+                                <p class="card-text">N予備校で製作したやつ</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="assessment/assessment.html" class="btn btn-primary" 
+                                    target="_blank" rel="noopener noreferrer">Go</a>
+                                    <small class="text-muted">2/2023</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-muted py-5">
+
+    </footer>
 </body>
 </html>
